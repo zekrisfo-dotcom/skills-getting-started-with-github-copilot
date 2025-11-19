@@ -144,13 +144,31 @@ footer {
 }
 
 ul.participants-list {
-  margin: 10px 0 0 20px;
-  padding-left: 20px;
-  list-style-type: disc;
+  margin: 10px 0 0 0; /* Remove indentation */
+  padding-left: 0; /* Remove bullet point padding */
+  list-style-type: none; /* Hide bullet points */
   color: #1a237e; /* Dark blue for participants */
   font-size: 14px;
 }
 
 ul.participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 5px;
+}
+
+ul.participants-list .delete-participant {
+  background: none;
+  border: none;
+  color: #c62828; /* Red color for delete icon */
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  margin-left: 10px;
+  transition: color 0.2s;
+}
+
+ul.participants-list .delete-participant:hover {
+  color: #ff5252; /* Lighter red on hover */
 }
